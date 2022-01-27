@@ -130,3 +130,19 @@ for (const [key, event] of gameEvents) {
   events.add(event);
 }
 console.log(events);
+
+// Challenge 13: remove event at min 64
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// Challenge 14: Compute and log the following string to the console:"An event happend on average every 9 minutes"
+console.log(
+  `An event happened on average every ${90 / gameEvents.size} minutes`
+);
+
+// CHallege a5: loop over "game eveents" and log each element to the console, marking whether its in the first half or the second half of the game
+
+gameEvents.forEach((event, min) => {
+  let half = min < 45 ? '[FIRST HALF]' : '[SECOND HALF]';
+  console.log(`${half} ${min}: ${event}`);
+});
