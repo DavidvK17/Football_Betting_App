@@ -7,4 +7,7 @@ Here I practice working with objects and arrays, using:
 - SPREAD Operator
 - REST Operator
 - Short Circuiting
-- Array Methods
+  -Array Methods
+
+* Maps
+* Sets
