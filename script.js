@@ -108,5 +108,4 @@ let scorerArr = game.scored.map((val, i, arr) => {
   return (scorers[val] = arr.count(val));
 });
 
-console.log(scorerArr);
 console.log(scorers);
