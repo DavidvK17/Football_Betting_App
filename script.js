@@ -38,7 +38,7 @@ const game = {
   odds: {
     team1: 1.33,
     x: 3.25,
-    team2: 1.5
+    team2: 6.5
   }
 };
 
@@ -75,3 +75,22 @@ printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 // my solution: using short circuiting
 team1 < team2 && console.log(`${game.team1} is more likely to win.`);
 team2 < team1 && console.log(`${game.team2} is more likely to win.`);
+
+// Challenge 8: loop over game.scored array and print eacht player name to the console, along with the goal number
+game.scored.forEach((scorer, goal) => console.log(scorer, goal + 1));
+
+// Challenge 9: Use a loop to calculate the average odd
+const odds = Object.values(game.odds);
+console.log(odds);
+let avgOdd = 0;
+for (let odd of odds) {
+  avgOdd += odd;
+}
+console.log((avgOdd /= odds.length));
+
+// Challenge 10: Print the 3 odds to the console in a nice formatted way
+console.log(`Odd of vitory ${game.team1}: ${game.odds.team1}
+Odd of draw: ${game.odds.x}
+Odd of vitory ${game.team2}: ${game.odds.team2}`);
+
+// Challenge 11: Create an object called scorers, which contains the names of the players who scored as properties, and the number of goals as the value:
