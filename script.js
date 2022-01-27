@@ -94,3 +94,19 @@ Odd of draw: ${game.odds.x}
 Odd of vitory ${game.team2}: ${game.odds.team2}`);
 
 // Challenge 11: Create an object called scorers, which contains the names of the players who scored as properties, and the number of goals as the value:
+const scorers = {};
+let scorerArr = game.scored.map((val, i, arr) => {
+  Array.prototype.count = function(name) {
+    let appearance = 0;
+    this.forEach(i => {
+      if (i === name) {
+        appearance++;
+      }
+    });
+    return appearance;
+  };
+  return (scorers[val] = arr.count(val));
+});
+
+console.log(scorerArr);
+console.log(scorers);
